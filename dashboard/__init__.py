@@ -1,0 +1,1 @@
+"""Smart Dam Monitoring dashboard package."""

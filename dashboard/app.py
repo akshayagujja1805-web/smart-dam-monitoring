@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, request
+from prediction import predict_water_level
 
 from risk_engine import assess_risk
 from simulator import SCENARIOS, generate_reading
@@ -30,11 +31,13 @@ def get_readings():
     try:
         reading = generate_reading(scenario)
         assessment = assess_risk(reading)
+        prediction = predict_water_level(reading)
 
         return jsonify(
             {
                 "reading": reading,
-                "assessment": assessment
+                "assessment": assessment,
+                "prediction": prediction
             }
         )
 
