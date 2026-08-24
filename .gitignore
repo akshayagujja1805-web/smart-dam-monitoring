@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Environments
+.env
+.venv/
+venv/
+
+# Spyder
+.spyproject/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Databases and generated data
+*.db
+*.sqlite
+*.sqlite3
+data/*.csv
+data/*.json
+
+# Logs
+*.log
+logs/
+
+# Operating system
+Thumbs.db
+.DS_Store
